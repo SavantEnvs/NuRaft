@@ -1,0 +1,9 @@
+project: savantenvs/NuRaft
+target: fuzz_rpc_request_raw
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_rpc_request_raw/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_rpc_request_raw
+    libfuzzer: true
+    timeout: 10

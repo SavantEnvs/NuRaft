@@ -1,0 +1,8 @@
+project: savantenvs/NuRaft
+target: fuzz_snapshot_sync_req
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_snapshot_sync_req/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_snapshot_sync_req
+    libfuzzer: true

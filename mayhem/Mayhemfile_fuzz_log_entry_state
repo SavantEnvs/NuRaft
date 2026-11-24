@@ -1,0 +1,8 @@
+project: savantenvs/NuRaft
+target: fuzz_log_entry_state
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_log_entry_state/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_log_entry_state
+    libfuzzer: true
